@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="A simple blog website">
+    <title>Jeho Computer</title>
+    <link rel="icon" href="your-logo.png" type="image/png">
+    <style>
+        /* General Styles */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            line-height: 1.6;
+            color: #333;
+            background-color: #f4f4f9;
+        }
+
+        header {
+            background: #35424a;
+            color: #ffffff;
+            padding: 10px 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo-container {
+            display: flex;
+            align-items: center;
+        }
+
+        .logo-image {
+            height: 40px;
+            margin-right: 10px;
+        }
+
+        .logo-text {
+            font-size: 24px;
+            font-weight: bold;
+        }
+
+        nav ul {
+            list-style: none;
+            padding: 0;
+            display: flex;
+            margin: 0;
+        }
+
+        nav ul li {
+            margin: 0 15px;
+        }
+
+        nav ul li a {
+            color: #ffffff;
+            text-decoration: none;
+            font-size: 16px;
+        }
+
+        nav ul li a:hover {
+            text-decoration: underline;
+        }
+
+        .search-container {
+            display: flex;
+            align-items: center;
+        }
+
+        .search-input {
+            padding: 5px;
+            font-size: 14px;
+            border: none;
+            border-radius: 3px;
+        }
+
+        .search-button {
+            padding: 5px 10px;
+            margin-left: 5px;
+            font-size: 14px;
+            background-color: #1e2a30;
+            color: #ffffff;
+            border: none;
+            border-radius: 3px;
+            cursor: pointer;
+        }
+
+        .search-button:hover {
+            background-color: #35424a;
+        }
+
+        main {
+            padding: 20px;
+        }
+
+        .posts {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .post {
+            background: #ffffff;
+            margin-bottom: 20px;
+            padding: 20px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        .post-title {
+            font-size: 22px;
+            margin: 0 0 10px;
+        }
+
+        .post-content {
+            font-size: 16px;
+            margin: 0 0 15px;
+        }
+
+        .read-more {
+            display: inline-block;
+            padding: 10px 15px;
+            background: #35424a;
+            color: #ffffff;
+            text-decoration: none;
+            border-radius: 3px;
+        }
+
+        .read-more:hover {
+            background: #1e2a30;
+        }
+
+        footer {
+            text-align: center;
+            padding: 10px 0;
+            background: #35424a;
+            color: #ffffff;
+            position: relative;
+            bottom: 0;
+            width: 100%;
+        }
+
+        footer .social-links a {
+            color: #ffffff;
+            text-decoration: none;
+            margin: 0 5px;
+        }
+
+        footer .social-links a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo-container">
+                <img src="your-logo.png" alt="Jeho Computer Logo" class="logo-image">
+                <div class="logo-text">Jeho Computer</div>
+            </div>
+            <ul class="nav-links">
+                <li><a href="#">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+            <div class="search-container">
+                <input type="text" placeholder="Search..." class="search-input">
+                <button class="search-button">Search</button>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <section class="posts">
+            <article class="post">
+                <h2 class="post-title">Welcome to Jeho Computer</h2>
+                <p class="post-content">This is the first post on Jeho Computer. Stay tuned for more updates!</p>
+                <a href="#" class="read-more">Read More</a>
+            </article>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 J Computer. All rights reserved.</p>
+        <div class="social-links">
+            <a href="#">Twitter</a> |
+            <a href="#">Facebook</a> |
+            <a href="#">Instagram</a>
+        </div>
+    </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            // Example functionality: Alert when clicking on 'Read More' links
+            const readMoreLinks = document.querySelectorAll('.read-more');
+
+            readMoreLinks.forEach(link => {
+                link.addEventListener('click', event => {
+                    event.preventDefault(); // Prevent the default link behavior
+                    alert('Read more functionality coming soon!');
+                });
+            });
+
+            // Example: Search functionality
+            const searchInput = document.querySelector('.search-input');
+            const searchButton = document.querySelector('.search-button');
+
+            searchButton.addEventListener('click', () => {
+                const query = searchInput.value.trim();
+                if (query) {
+                    alert(`Search for: ${query}`);
+                } else {
+                    alert('Please enter a search term.');
+                }
+            });
+        });
+    </script>
+</body>
+</html>
